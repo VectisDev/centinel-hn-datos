@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Centinel — HN 2026</title>
+<style>
+:root{--bg:#0f1115;--panel:#15171c;--border:#24272e;--fg:#e7e9ec;--muted:#8b929c;--accent:#6ea8fe;--ok:#57c08d;--bad:#df6b86;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:40px 20px;min-height:100vh;}
+h1{font-size:22px;font-weight:700;margin-bottom:4px;}
+.sub{font-size:13px;color:var(--muted);margin-bottom:32px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:24px;}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;}
+.card .lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px;}
+.card .val{font-size:26px;font-weight:700;letter-spacing:-.02em;}
+.cand-row{display:flex;justify-content:space-between;align-items:center;
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;padding:12px 14px;margin-bottom:8px;}
+.cand-name{font-size:13px;font-weight:600;}
+.cand-party{font-size:11px;color:var(--muted);}
+.cand-votes{font-size:15px;font-weight:700;color:var(--accent);}
+.cand-pct{font-size:12px;color:var(--muted);margin-left:8px;}
+.bar-wrap{background:#1a1d23;border-radius:999px;height:4px;margin-top:6px;}
+.bar{height:100%;background:var(--accent);border-radius:999px;transition:.4s;}
+footer{font-size:11px;color:var(--muted);margin-top:32px;text-align:center;}
+footer a{color:var(--accent);}
+.hash{font-family:monospace;font-size:10px;color:var(--muted);word-break:break-all;}
+</style>
+</head>
+<body>
+<div style="max-width:800px;margin:0 auto;">
+  <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">
+    CENTINEL — AUDITORÍA ELECTORAL AUTÓNOMA
+  </div>
+  <h1>Panel de Transparencia · HN 2026</h1>
+  <p class="sub">Datos descargados del CNE y verificados con hash chain SHA-256.</p>
+  <div class="grid" id="stats">
+    <div class="card"><div class="lbl">Estado</div><div class="val" style="font-size:14px;color:var(--muted);">Cargando…</div></div>
+  </div>
+  <div id="candidates"></div>
+  <div style="margin-top:24px;">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;">Hash del último snapshot</div>
+    <div class="hash" id="snap-hash">—</div>
+  </div>
+  <footer style="margin-top:32px;">
+    Datos: <a href="https://raw.githubusercontent.com/VectisDev/centinel-hn-datos/main/web/data/snapshot.json" target="_blank">snapshot.json</a> ·
+    Motor: <a href="https://github.com/VectisDev/centinel" target="_blank">VectisDev/centinel</a> ·
+    Datos: <a href="https://github.com/VectisDev/centinel-hn-datos" target="_blank">VectisDev/centinel-hn-datos</a>
+  </footer>
+</div>
+<script>
+const RAW = 'https://raw.githubusercontent.com/VectisDev/centinel-hn-datos/main/web/data/snapshot.json';
+async function load(){
+  try{
+    const r = await fetch(RAW+'?t='+Date.now());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const d = await r.json();
+    renderStats(d);
+    renderCandidates(d);
+    document.getElementById('snap-hash').textContent = d.hash || d.checkpoint_hash || '—';
+  }catch(e){
+    document.getElementById('stats').innerHTML =
+      '<div class="card"><div class="lbl">Error</div><div class="val" style="font-size:13px;color:var(--muted);">'+e.message+'</div></div>';
+  }
+}
+function fmt(n){return(+n||0).toLocaleString('es-HN');}
+function pct(a,b){return b?((a/b)*100).toFixed(1)+'%':'—';}
+function renderStats(d){
+  const ac = d.actas||{};
+  const vt = d.votos_totales||{};
+  const ts = d.timestamp_utc||d.timestamp||'';
+  document.getElementById('stats').innerHTML = `
+    <div class="card"><div class="lbl">Actualización</div><div class="val" style="font-size:14px;">${ts.replace('T',' ').replace('Z','') || '—'} UTC</div></div>
+    <div class="card"><div class="lbl">Actas procesadas</div><div class="val">${fmt(ac.divulgadas||0)}</div></div>
+    <div class="card"><div class="lbl">Total actas</div><div class="val">${fmt(ac.totales||0)}</div></div>
+    <div class="card"><div class="lbl">Votos válidos</div><div class="val">${fmt(vt.validos||0)}</div></div>
+  `;
+}
+function renderCandidates(d){
+  const cands = d.candidatos||[];
+  const maxV = Math.max(...cands.map(c=>c.votes||0), 1);
+  document.getElementById('candidates').innerHTML = `
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:10px;">Resultados</div>
+    ${cands.sort((a,b)=>(b.votes||0)-(a.votes||0)).map(c=>`
+      <div class="cand-row">
+        <div>
+          <div class="cand-name">${c.name||'—'}</div>
+          <div class="cand-party">${c.party||''}</div>
+          <div class="bar-wrap"><div class="bar" style="width:${Math.round(((c.votes||0)/maxV)*100)}%"></div></div>
+        </div>
+        <div style="text-align:right;">
+          <div class="cand-votes">${fmt(c.votes||0)}</div>
+          <div class="cand-pct">${c.percentage?c.percentage.toFixed(1)+'%':pct(c.votes,d.votos_totales?.validos)}</div>
+        </div>
+      </div>
+    `).join('')}
+  `;
+}
+load();
+setInterval(load, 5*60*1000);
+</script>
+</body>
+</html>
