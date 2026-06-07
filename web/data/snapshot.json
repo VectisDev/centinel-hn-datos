@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-07T19:56:56.528525+00:00",
+  "cne_status": {
+    "reachable": true,
+    "last_successful_fetch": null,
+    "last_attempt": null,
+    "consecutive_failures": 0,
+    "blackout_minutes": 0,
+    "blackout_since": null,
+    "error_type": null,
+    "blackout_hash": null
+  },
+  "chain": {
+    "latest_hash": "",
+    "merkle_root": "",
+    "chain_length": 0,
+    "ots_status": "pending"
+  },
+  "national": {},
+  "departments": {},
+  "forensics": {},
+  "alerts": [],
+  "coverage": {
+    "actas_escrutadas": 0,
+    "actas_total": 0,
+    "pct_coverage": 0.0
+  },
+  "report_pdf_url": null,
+  "endpoint_health": {
+    "checked_at": "2026-06-07T19:56:57.469856+00:00",
+    "animal_mode": "normal",
+    "safe_mode_active": false,
+    "consecutive_failures": 0,
+    "main_url": "https://resultadosgenerales2025.cne.hn/api/presidencial/nacional",
+    "total": 18,
+    "online": 0,
+    "degraded": 0,
+    "offline": 18,
+    "endpoints": [
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/01",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/02",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/03",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/04",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/05",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/06",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/07",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/08",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/09",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/10",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/11",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/12",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/13",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/14",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/15",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/16",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/17",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      },
+      {
+        "url": "https://resultadosgenerales2025.cne.hn/api/presidencial/departamento/18",
+        "dept": "?",
+        "level": "?",
+        "status": "offline",
+        "last_validated": null,
+        "auto_replaced": false
+      }
+    ],
+    "available": true
+  }
+}
