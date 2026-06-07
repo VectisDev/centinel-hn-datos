@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "algorithm": "PBKDF2-SHA256",
+  "iterations": 600000,
+  "salt": "centinel-admin-salt-v1",
+  "seeds": [
+    {
+      "slot": 1,
+      "hash": "9b52acf90065d6655f983cb3978a41c26a9546cd4b87360a1d44be3c5f03c94f"
+    },
+    {
+      "slot": 2,
+      "hash": "2491abe522238492c4060ae3a0b106fc7cf770900afc942e5e9940a58ecdb5c9"
+    },
+    {
+      "slot": 3,
+      "hash": "b66864679c8223a2613a8c0b90da4a3d5f20c2d799b7930518c8f2b03742b517"
+    },
+    {
+      "slot": 4,
+      "hash": "83939ea48bfe611a711d5820f2d6548aaae593f8a67fe88069d3b6900d31fed5"
+    },
+    {
+      "slot": 5,
+      "hash": "d594fc06a887f3bf7935cf76c55416a986813717857779a6563c8feaa4e24acd"
+    },
+    {
+      "slot": 6,
+      "hash": "cb80b335edd188cbf4fa2f0c9a3d618ca757aa25be356dfdf47b66f977f57c44"
+    },
+    {
+      "slot": 7,
+      "hash": "e5648f5125ef470635404699445568360c1a14c32714e37d027688382965edad"
+    },
+    {
+      "slot": 8,
+      "hash": "eac140ec75ce12f4598deafce3542faf233c1907655e345d2ab6e3da942f0b94"
+    },
+    {
+      "slot": 9,
+      "hash": "859241491ffacdbe93df604900473468a6b7c5418a0b227cac1835f95badf16c"
+    },
+    {
+      "slot": 10,
+      "hash": "44d9f7fc6e61fbba63833c2b8c505eb896e71eeae84121a29cd93c2967f069ba"
+    },
+    {
+      "slot": 11,
+      "hash": "a9e8b54bcc8e209b7fd132b17938ecfcfc1c976cbd46609a4ae654e5d5bf3a68"
+    },
+    {
+      "slot": 12,
+      "hash": "c88542c87e7d52feca591c52abb440704a4e825e3b1e8a1d77d2828d6af850a5"
+    }
+  ],
+  "generated_at": "2026-06-07T18:23:53.104Z",
+  "country": "HN",
+  "year": "2026",
+  "writer_pat": {
+    "enc": "6bt4qcRe3MeJgP2KYvk78qQvgwD8exJaOehdD/j9vSqNWAz2vFDlMobBJRCvMqla8Ht6zXicbD8=",
+    "iv": "1UygvbuBUoi7xoeX",
+    "wraps": [
+      {
+        "slot": 1,
+        "enc": "osCaPJc+yeFhtiNdBFalRsbZsFmMeqXmXfx/SrzwXIuA3lPTePBxO+WbLHIPzoUp60xCpzsvvYZeVF3l",
+        "iv": "82Sad858pY2HErzU"
+      },
+      {
+        "slot": 2,
+        "enc": "MU0pe20tKkRjZj/C50GeSty19s7laZ7GV2aFSjmy4dYc0l1o6inz1iVT68g70//sdfNMYP8c9zvibsj4",
+        "iv": "/2HY1aPRw0UzPj6K"
+      },
+      {
+        "slot": 3,
+        "enc": "o0L7yWkz46WW7ndyshB1EuCRFEQ2p1IeM4ve1vpWjidtvPbcjgpHtR5xyu7Y6hd+Yp2WCZVlU8526j5V",
+        "iv": "ZTEX0KQACSa5Uln/"
+      },
+      {
+        "slot": 4,
+        "enc": "3WpsO1iVrNVtTkdst69feW3bLH3rHAMgTQfP5Qw8QeQD8vBWQV2M92pg0vIAesvLb2X9HqQRsF7s6BzZ",
+        "iv": "BN0A5T7xKTm3FkLO"
+      },
+      {
+        "slot": 5,
+        "enc": "yFtDAgqOWU9pzTJCoXXYL61vuidN5PvNIfKEL7xZSAjYa4ET+4GDYZNVEMMRWQFswfdR9lAEAQBF21NL",
+        "iv": "crFR9raliKJuJZlw"
+      },
+      {
+        "slot": 6,
+        "enc": "SV7Hq85kIxIPYPXqlf3dGsI6VokUAjBEphYYiUNSK0fjULQ1ZnoZ5RZWlz31gDezSiV9Xtx9UZXdqUH4",
+        "iv": "B/Iz29uDV1NVaHzE"
+      },
+      {
+        "slot": 7,
+        "enc": "qQzns/L6t0Zf8tjLKg+2n8NfRowYREC5htY9VoSHTwVWjWrvGcuPEaaOVMk3eYpRLkQE4ZOrmhuls0FL",
+        "iv": "jlLLljoC/gE7eZwl"
+      },
+      {
+        "slot": 8,
+        "enc": "cgoCDEtfn9LnQZZHVlddCQlmtQsPJ3PVXZ0ElFYheiLNX5QjOMEMrURMwFCeF3iZ9N5fhquvvHccaNYs",
+        "iv": "3cCB3srvJVkFwxOj"
+      },
+      {
+        "slot": 9,
+        "enc": "+s2+6GhZZLOuePWV0IefIYCP42QTxCN/YOFNiRhyLKzofaX8pXmTz0ttPIFf6frGlaWcc+gDwhHuqHMP",
+        "iv": "PggA2eAwbbl/UFm+"
+      },
+      {
+        "slot": 10,
+        "enc": "bxh7D+3FKqjr5XuGdRZPIp9VSD6Hru5WAPZjZxfz29950kXmcdeKJW6THhcF3RBkUruV3f3bfJluxYdn",
+        "iv": "uyNOw62GL3zvG7xq"
+      },
+      {
+        "slot": 11,
+        "enc": "f5vhVaQrY7ods9h761qD7XgB02MI/Dn4DCDIS3IBtXE75srDy0GxTQXe4nAXKEnVDvGeQK0HcsLmw4qb",
+        "iv": "6hn9oVre49aRIe9H"
+      },
+      {
+        "slot": 12,
+        "enc": "8ry11Y1evb7KcOE6bQRybjAVsHo4QkS7fltJ0/f/gNBS2H9ol/9xU75OGmJztvKtDbgmRCasJo9IMlBQ",
+        "iv": "Ftl8h7H2vR6t6PoU"
+      }
+    ]
+  }
+}
