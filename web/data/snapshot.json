@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-12T12:33:27.885637+00:00",
+  "generated_at": "2026-06-12T15:58:51.528232+00:00",
   "cne_status": {
     "reachable": true,
     "last_successful_fetch": null,
@@ -28,7 +28,7 @@
   },
   "report_pdf_url": null,
   "endpoint_health": {
-    "checked_at": "2026-06-12T12:33:29.365125+00:00",
+    "checked_at": "2026-06-12T15:58:52.588555+00:00",
     "animal_mode": "normal",
     "safe_mode_active": false,
     "consecutive_failures": 0,
