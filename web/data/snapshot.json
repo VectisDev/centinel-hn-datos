@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-19T00:15:30.786030+00:00",
+  "generated_at": "2026-06-19T05:29:54.899330+00:00",
   "cne_status": {
     "reachable": true,
     "last_successful_fetch": null,
@@ -28,8 +28,8 @@
   },
   "report_pdf_url": null,
   "endpoint_health": {
-    "checked_at": "2026-06-19T00:15:31.783497+00:00",
-    "animal_mode": "normal",
+    "checked_at": "2026-06-19T05:29:55.740491+00:00",
+    "argos_protocol": "normal",
     "safe_mode_active": false,
     "consecutive_failures": 0,
     "main_url": "https://resultadosgenerales2025.cne.hn/api/presidencial/nacional",
