@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-07T10:36:18.916410+00:00",
+  "generated_at": "2026-08-07T11:33:21.697273+00:00",
   "cne_status": {
     "reachable": true,
     "last_successful_fetch": null,
@@ -28,7 +28,7 @@
   },
   "report_pdf_url": null,
   "endpoint_health": {
-    "checked_at": "2026-08-07T10:36:19.864910+00:00",
+    "checked_at": "2026-08-07T11:33:22.523665+00:00",
     "argos_protocol": "normal",
     "safe_mode_active": false,
     "consecutive_failures": 0,
